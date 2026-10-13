@@ -1,0 +1,154 @@
+{
+ "run_id": "residual-wit",
+ "config": "configs/tabular_residual.toml",
+ "track": "hybrid",
+ "kind": "residual",
+ "split": "witness",
+ "protocol": {
+  "all_months": [
+   "2025-01",
+   "2025-02",
+   "2025-03",
+   "2025-04",
+   "2025-05",
+   "2025-06",
+   "2025-07",
+   "2025-08",
+   "2025-09",
+   "2025-10",
+   "2025-11",
+   "2025-12"
+  ],
+  "reserve_months": [
+   "2025-11",
+   "2025-12"
+  ],
+  "dev_val_months": [
+   "2025-01",
+   "2025-02",
+   "2025-06",
+   "2025-07"
+  ]
+ },
+ "global": {
+  "rmse": 278.7425747241723,
+  "mae": 149.8847103708112,
+  "bias": -9.887848156560434,
+  "n_rows": 350124
+ },
+ "by_month": [
+  {
+   "month": "2025-03",
+   "n": 164450,
+   "rmse": 293.6018892470314,
+   "mae": 144.05370318324404,
+   "bias": -8.72074979887626
+  },
+  {
+   "month": "2025-10",
+   "n": 185674,
+   "rmse": 264.8866259345882,
+   "mae": 155.04918752967797,
+   "bias": -10.921537983467609
+  }
+ ],
+ "by_airport": [
+  {
+   "ADEP_mvt": "LIRF",
+   "n": 26686,
+   "rmse": 687.0505101077924,
+   "mae": 257.00470211758767,
+   "bias": -10.851170843807358
+  },
+  {
+   "ADEP_mvt": "LTFM",
+   "n": 44879,
+   "rmse": 265.30760698390765,
+   "mae": 174.28347347793044,
+   "bias": -13.935561135763738
+  },
+  {
+   "ADEP_mvt": "EGLL",
+   "n": 39908,
+   "rmse": 254.64895174045654,
+   "mae": 170.29579214633054,
+   "bias": -11.14760242559978
+  },
+  {
+   "ADEP_mvt": "LFPG",
+   "n": 40150,
+   "rmse": 239.01027619929272,
+   "mae": 153.35867809796025,
+   "bias": -10.978787136340777
+  },
+  {
+   "ADEP_mvt": "LEBL",
+   "n": 30447,
+   "rmse": 208.72343743479436,
+   "mae": 137.19750678588122,
+   "bias": -16.124307342127775
+  },
+  {
+   "ADEP_mvt": "LEMD",
+   "n": 36438,
+   "rmse": 198.42763204889832,
+   "mae": 138.25751661422774,
+   "bias": -16.430706717811766
+  },
+  {
+   "ADEP_mvt": "LSZH",
+   "n": 22751,
+   "rmse": 172.9490727088407,
+   "mae": 121.80912033682634,
+   "bias": -1.7156225787607025
+  },
+  {
+   "ADEP_mvt": "EDDF",
+   "n": 38875,
+   "rmse": 172.30109407409012,
+   "mae": 123.62675061008854,
+   "bias": -8.95228313223923
+  },
+  {
+   "ADEP_mvt": "EHAM",
+   "n": 42008,
+   "rmse": 171.97276186995217,
+   "mae": 118.39453513523426,
+   "bias": -3.648785475255356
+  },
+  {
+   "ADEP_mvt": "EDDM",
+   "n": 27982,
+   "rmse": 161.33693103169125,
+   "mae": 110.02632800103135,
+   "bias": -1.1199535474148494
+  }
+ ],
+ "out_of_domain": {
+  "n_negative": 96,
+  "n_zero": 0,
+  "n_over_7200": 78,
+  "n_nonfinite": 0
+ },
+ "folds": {
+  "2025-03": {
+   "proxy_used_share": 0.9934144116752812,
+   "fallback_kind": "causal_model",
+   "best_iteration": 4000,
+   "n_train_rows": 1574206,
+   "gate_modelee": {}
+  },
+  "2025-10": {
+   "proxy_used_share": 0.9896969958098603,
+   "fallback_kind": "causal_model",
+   "best_iteration": 4000,
+   "n_train_rows": 1553812,
+   "gate_modelee": {}
+  }
+ },
+ "runtime_s": 357.5,
+ "peak_rss_mib": 4159.1,
+ "peak_rss_mib_note": "pic RSS du processus principal uniquement (enfants non compt\u00e9s sur macOS)",
+ "metric_unit": "secondes",
+ "avertissement": "piste de reconstitution : le proxy MVT_TIME - AOBT_3 sert de base, l'information est posterieure a l'off-block"
+}

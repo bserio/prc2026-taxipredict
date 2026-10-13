@@ -1,0 +1,47 @@
+name = "causal-nostand"
+kind = "lightgbm"
+track = "causal"
+train_filter = false             # D-011 : exclure la queue coute +2,3 % (causal-r4-filtered)
+
+# Variante d'audit (D-035) : que coute une prediction qui n'utilise AUCUNE information
+# deduite de STAND_mvt ? Sont retirees : codage cible aéroport x poste, offset geometrique
+# du poste, distance attendue a la piste. Tout le reste est identique a tabular_causal.toml.
+
+[features]
+calendar = true                 # depuis SCHED_TIME_UTC_mvt (horaire publie, connu d'avance)
+airport = true                  # ADEP_mvt
+aircraft = true                 # AIRCRAFT_TYPE_mvt/_flt, WK_TBL_CAT_flt
+ops = true                      # MARKET_SEGMENT_flt, FLIGHT_RULE_*, FLIGHT_TYPE_flt
+operator_enc = true             # AIRCRAFT_OPERATOR_flt : codage cible lisse (train uniquement)
+stand_enc = false               # RETIRE : STAND_mvt et tout ce en decoulant (D-035)
+geometry = false                # RETIRE avec le poste : offsets appris du taxi-in des arrivees
+expected_runway_distance = false # RETIRE avec le poste : P(piste | poste, heure)
+plan_delay = true               # EOBT_1/IOBT/LOBT - SCHED (champs de planification) + indicateur de nullité
+congestion_planned = true       # arrivées et départs PLANIFIÉS par créneau (SCHED_TIME) + ratio de capacité
+history_enc = true              # moyennes cibles lissées aéroport×heure, aéroport×jour×créneau (train uniquement)
+
+[features.forbidden]
+# Interdits dans cette piste : informations postérieures à l'off-block.
+mvt_time = true
+aobt_3 = true
+block_time = true
+taxitime_as_feature = true
+runway_actual = true            # coût mesuré de l'exclusion : 1-70 s hors LSZH 243 s, LTFM 114 s (DECISIONS.md D-005)
+
+[lightgbm]
+objective = "regression"        # L2 = metrique officielle
+learning_rate = 0.05
+num_leaves = 96
+min_data_in_leaf = 200
+feature_fraction = 0.8
+bagging_fraction = 0.8
+bagging_freq = 1
+lambda_l2 = 1.0
+num_threads = 12
+seed = 7
+num_boost_round = 4000
+early_stopping_round = 150
+
+[budget]
+max_runtime_s = 1200
+max_mem_gib = 60

@@ -1,0 +1,206 @@
+{
+ "run_id": "residual-r7-calib-iso",
+ "config": "configs/tabular_residual_calib_iso.toml",
+ "track": "hybrid",
+ "kind": "residual",
+ "split": "dev",
+ "protocol": {
+  "all_months": [
+   "2025-01",
+   "2025-02",
+   "2025-03",
+   "2025-04",
+   "2025-05",
+   "2025-06",
+   "2025-07",
+   "2025-08",
+   "2025-09",
+   "2025-10",
+   "2025-11",
+   "2025-12"
+  ],
+  "reserve_months": [
+   "2025-11",
+   "2025-12"
+  ],
+  "dev_val_months": [
+   "2025-01",
+   "2025-02",
+   "2025-06",
+   "2025-07"
+  ]
+ },
+ "global": {
+  "rmse": 490.35884190910997,
+  "mae": 164.564411502035,
+  "bias": -4.191277561428414,
+  "n_rows": 671292
+ },
+ "by_month": [
+  {
+   "month": "2025-07",
+   "n": 190713,
+   "rmse": 599.3157646599965,
+   "mae": 182.23010803356524,
+   "bias": -6.96877675993656
+  },
+  {
+   "month": "2025-02",
+   "n": 143731,
+   "rmse": 461.70262449937223,
+   "mae": 158.5739727036633,
+   "bias": -16.99789295306571
+  },
+  {
+   "month": "2025-01",
+   "n": 153706,
+   "rmse": 450.07324393635133,
+   "mae": 156.41444982717022,
+   "bias": 3.935491297473373
+  },
+  {
+   "month": "2025-06",
+   "n": 183142,
+   "rmse": 412.33976734295874,
+   "mae": 157.70979478663284,
+   "bias": 1.9311831918348723
+  }
+ ],
+ "by_airport": [
+  {
+   "ADEP_mvt": "LIRF",
+   "n": 51927,
+   "rmse": 1474.3814966878251,
+   "mae": 324.8578985560344,
+   "bias": -11.800751190581796
+  },
+  {
+   "ADEP_mvt": "LFPG",
+   "n": 77305,
+   "rmse": 448.20942941542836,
+   "mae": 170.88597644368508,
+   "bias": 6.943228074987215
+  },
+  {
+   "ADEP_mvt": "LTFM",
+   "n": 88348,
+   "rmse": 380.8571619726593,
+   "mae": 207.80740331201633,
+   "bias": -34.9553061817303
+  },
+  {
+   "ADEP_mvt": "EGLL",
+   "n": 78229,
+   "rmse": 266.5909175852714,
+   "mae": 174.37183959063853,
+   "bias": 5.42522134768455
+  },
+  {
+   "ADEP_mvt": "LSZH",
+   "n": 43477,
+   "rmse": 221.90869296927477,
+   "mae": 131.68502284451822,
+   "bias": 1.4832279037699891
+  },
+  {
+   "ADEP_mvt": "LEBL",
+   "n": 57470,
+   "rmse": 216.4188944555285,
+   "mae": 143.22137815778316,
+   "bias": 1.169068571284898
+  },
+  {
+   "ADEP_mvt": "EDDF",
+   "n": 72635,
+   "rmse": 191.2487422865567,
+   "mae": 130.06101634272684,
+   "bias": -1.0209448970570978
+  },
+  {
+   "ADEP_mvt": "EHAM",
+   "n": 80058,
+   "rmse": 189.97883093922812,
+   "mae": 119.80339505605708,
+   "bias": -2.953091662907598
+  },
+  {
+   "ADEP_mvt": "EDDM",
+   "n": 53133,
+   "rmse": 189.63681674502402,
+   "mae": 122.5389453479607,
+   "bias": -8.85666278565551
+  },
+  {
+   "ADEP_mvt": "LEMD",
+   "n": 68710,
+   "rmse": 184.54319191287803,
+   "mae": 129.32567405058717,
+   "bias": 8.379644186852383
+  }
+ ],
+ "out_of_domain": {
+  "n_negative": 72,
+  "n_zero": 0,
+  "n_over_7200": 179,
+  "n_nonfinite": 0
+ },
+ "folds": {
+  "2025-01": {
+   "proxy_used_share": 0.9906639948993533,
+   "fallback_kind": "causal_model",
+   "best_iteration": 4000,
+   "n_train_rows": 1585302,
+   "specialist": {
+    "actif": false,
+    "iterations": 0,
+    "cible": "none",
+    "part_lignes": 0.0
+   },
+   "gate_modelee": {}
+  },
+  "2025-02": {
+   "proxy_used_share": 0.9922841975635041,
+   "fallback_kind": "causal_model",
+   "best_iteration": 4000,
+   "n_train_rows": 1594951,
+   "specialist": {
+    "actif": false,
+    "iterations": 0,
+    "cible": "none",
+    "part_lignes": 0.0
+   },
+   "gate_modelee": {}
+  },
+  "2025-06": {
+   "proxy_used_share": 0.9863384696028219,
+   "fallback_kind": "causal_model",
+   "best_iteration": 4000,
+   "n_train_rows": 1556933,
+   "specialist": {
+    "actif": false,
+    "iterations": 0,
+    "cible": "none",
+    "part_lignes": 0.0
+   },
+   "gate_modelee": {}
+  },
+  "2025-07": {
+   "proxy_used_share": 0.9793511716558388,
+   "fallback_kind": "causal_model",
+   "best_iteration": 4000,
+   "n_train_rows": 1550798,
+   "specialist": {
+    "actif": false,
+    "iterations": 0,
+    "cible": "none",
+    "part_lignes": 0.0
+   },
+   "gate_modelee": {}
+  }
+ },
+ "runtime_s": 603.6,
+ "peak_rss_mib": 4311.2,
+ "peak_rss_mib_note": "pic RSS du processus principal uniquement (enfants non compt\u00e9s sur macOS)",
+ "metric_unit": "secondes",
+ "avertissement": "piste de reconstitution : le proxy MVT_TIME - AOBT_3 sert de base, l'information est posterieure a l'off-block"
+}

@@ -1,0 +1,32 @@
+# Definition officielle : RMSE sur les predictions soumises des departements.
+# Source : https://prc-data-challenge-2026.netlify.app/ranking.html (consulte 2026-10-09)
+
+[metric]
+name = "rmse"
+unit = "secondes"
+direction = "minimize"
+# La RMSE officielle est calculee sur TOUTES les lignes attendues du gabarit.
+# La moyenne non ponderee des RMSE mensuelles n'est PAS la RMSE globale.
+
+[population]
+phase = "DEP"          # le gabarit ne contient que les departements
+target = "TAXITIME_SEC_mvt"
+id = "MVT_ID_mvt"
+
+[train_filter]
+# Hypothese separee, validee sur developpement, appliquee a l'ENTRAINEMENT seulement.
+# L'evaluation garde toutes les lignes attendues.
+enabled = true
+min_sec = 60
+max_sec = 7200
+
+[clip]
+# Ecretage des predictions aux bornes par aéroport calibrees sur le train du pli.
+# Hypothese separee (DECISIONS.md D-007) ; desactive pour la baseline et le causal de reference.
+enabled = false
+q_low = 0.005
+q_high = 0.995
+
+[report]
+per = ["month", "airport"]
+extra = ["mae", "bias", "coverage", "out_of_domain", "counts", "runtime_s", "peak_rss_mib"]

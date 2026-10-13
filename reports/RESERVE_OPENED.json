@@ -1,0 +1,61 @@
+{
+ "horodatage": "2026-10-10T06:17:23+0200",
+ "run_id": "reserve-2025-11-12",
+ "reserve": [
+  "2025-11",
+  "2025-12"
+ ],
+ "recettes": {
+  "causal": {
+   "rmse": 432.8,
+   "mae": 230.0,
+   "biais": 8.3,
+   "lignes": 328009,
+   "rmse_hors_lignes_aberrantes": 342.5,
+   "par_mois": [
+    [
+     "2025-11",
+     443.7
+    ],
+    [
+     "2025-12",
+     421.9
+    ]
+   ]
+  },
+  "residual": {
+   "rmse": 353.9,
+   "mae": 152.8,
+   "biais": -13.1,
+   "lignes": 328009,
+   "rmse_hors_lignes_aberrantes": 237.3,
+   "par_mois": [
+    [
+     "2025-11",
+     367.2
+    ],
+    [
+     "2025-12",
+     340.4
+    ]
+   ]
+  },
+  "reference": {
+   "rmse": 470.0,
+   "mae": 225.5,
+   "biais": 3.4,
+   "lignes": 328009,
+   "rmse_hors_lignes_aberrantes": 344.3,
+   "par_mois": [
+    [
+     "2025-11",
+     477.0
+    ],
+    [
+     "2025-12",
+     463.1
+    ]
+   ]
+  }
+ }
+}

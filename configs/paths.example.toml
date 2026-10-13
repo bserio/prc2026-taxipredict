@@ -1,0 +1,17 @@
+# Copier en configs/paths.local.toml (ignore par Git) et renseigner.
+# Les donnees officielles ne sont jamais deplacees ni modifiees : lecture seule.
+
+[data]
+official_dir = "/chemin/absolu/vers/10-09-2026-09-52-54_files_list"
+training_glob = "training_*.parquet"
+final_inputs = "final_ranking.parquet"        # entrees officielles de la finale (janv, fevr, juin, juil 2026)
+final_template = "final_submitting.parquet"   # gabarit officiel a remplir
+ranking_inputs = "ranking.parquet"            # phase precedente (janv + juil 2026), reference seulement
+ranking_template = "submitting.parquet"
+
+[write]
+artifacts = "artifacts"
+runs = "experiments/runs"
+reports = "reports"
+submission = "submission"
+tmp = "tmp"

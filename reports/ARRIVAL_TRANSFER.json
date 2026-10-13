@@ -1,0 +1,76 @@
+{
+ "run_id": "arrival-transfer",
+ "dispositif": {
+  "entrainement": [
+   "2025-02",
+   "2025-03",
+   "2025-04",
+   "2025-05",
+   "2025-06",
+   "2025-08",
+   "2025-09",
+   "2025-10"
+  ],
+  "local": [
+   "2025-01",
+   "2025-07"
+  ],
+  "periode_notee": [
+   "2026-01",
+   "2026-07"
+  ],
+  "note": "aucun reglage sur 2026 ; entrainement identique dans les deux mesures"
+ },
+ "modele": {
+  "best_iteration": 1791,
+  "n_features": 27,
+  "lignes_entrainement": 1409567
+ },
+ "local_2025": {
+  "rmse": 271.1050253041563,
+  "n_rows": 343999,
+  "par_mois": {
+   "2025-01": 259.59918222745563,
+   "2025-07": 280.03773263591825
+  },
+  "par_aeroport": {
+   "EDDF": 213.7,
+   "EDDM": 141.9,
+   "EGLL": 339.2,
+   "EHAM": 275.8,
+   "LEBL": 122.8,
+   "LEMD": 199.4,
+   "LFPG": 287.9,
+   "LIRF": 431.5,
+   "LSZH": 194.7,
+   "LTFM": 308.3
+  }
+ },
+ "periode_notee_2026": {
+  "rmse": 289.1486904719747,
+  "n_rows": 344693,
+  "par_mois": {
+   "2026-01": 321.49048695650106,
+   "2026-07": 260.51492205421647
+  },
+  "par_aeroport": {
+   "EDDF": 202.4,
+   "EDDM": 129.9,
+   "EGLL": 298.0,
+   "EHAM": 366.0,
+   "LEBL": 100.1,
+   "LEMD": 205.9,
+   "LFPG": 360.5,
+   "LIRF": 477.3,
+   "LSZH": 141.0,
+   "LTFM": 311.5
+  }
+ },
+ "facteur_transfert_modele": 1.0666,
+ "reference_moyenne_aeroport": {
+  "local_2025": 293.5,
+  "periode_notee_2026": 306.7,
+  "facteur": 1.0447
+ },
+ "runtime_s": 58.4
+}

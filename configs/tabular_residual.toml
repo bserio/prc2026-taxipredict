@@ -1,0 +1,28 @@
+name = "residual"
+kind = "lightgbm-residual"
+track = "hybrid"                 # base = proxy corrige ; le modele apprend le residu
+
+[features]
+runway_actual = true
+
+[reconstruct]
+min_sec = 60                     # borne d'ajustement du biais, pas de la prediction
+max_sec = 7200
+
+[lightgbm]
+objective = "regression"
+learning_rate = 0.05
+num_leaves = 96
+min_data_in_leaf = 200
+feature_fraction = 0.8
+bagging_fraction = 0.8
+bagging_freq = 1
+lambda_l2 = 1.0
+num_threads = 12
+seed = 7
+num_boost_round = 4000
+early_stopping_round = 150
+
+[budget]
+max_runtime_s = 1200
+max_mem_gib = 60

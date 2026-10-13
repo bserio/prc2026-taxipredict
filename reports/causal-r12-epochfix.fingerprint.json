@@ -1,0 +1,142 @@
+{
+ "files": {
+  "training_2025-01-01_2025-02-01.parquet": {
+   "n_dep": 153706,
+   "phase": "DEP",
+   "sha256_ids": "cab769637fe120cac5cca6691cd92cb868cd00e1274fed08777e9d2302d8ae1c"
+  },
+  "training_2025-02-01_2025-03-01.parquet": {
+   "n_dep": 143731,
+   "phase": "DEP",
+   "sha256_ids": "f197fae6cde3326f32912604df3c1413937201e2df6f43aec60d30fc1a076a27"
+  },
+  "training_2025-03-01_2025-04-01.parquet": {
+   "n_dep": 164450,
+   "phase": "DEP",
+   "sha256_ids": "e274343f317e056a283169c09ea2f7d484269974f2231f9bb42748af74b5c0d0"
+  },
+  "training_2025-04-01_2025-05-01.parquet": {
+   "n_dep": 175288,
+   "phase": "DEP",
+   "sha256_ids": "ba77e91f18ddfe497fff6d37f110e5c6a5e9d41f2beefab28f032807a818016b"
+  },
+  "training_2025-05-01_2025-06-01.parquet": {
+   "n_dep": 185202,
+   "phase": "DEP",
+   "sha256_ids": "80c40fdf1e5f04c7f0d4bdfa273c4e37c7a78b79737a66c92ca6bc20b4328c60"
+  },
+  "training_2025-06-01_2025-07-01.parquet": {
+   "n_dep": 183142,
+   "phase": "DEP",
+   "sha256_ids": "9e5cdb9bc06bfe2df889bc385e5032032f1256370d2cbc8b3b30916d825a1521"
+  },
+  "training_2025-07-01_2025-08-01.parquet": {
+   "n_dep": 190713,
+   "phase": "DEP",
+   "sha256_ids": "ef75f7c9968fdbc86747eccdeb84cd7143ce6d95f223e1fdb06c5cbbcc6a13dc"
+  },
+  "training_2025-08-01_2025-09-01.parquet": {
+   "n_dep": 191181,
+   "phase": "DEP",
+   "sha256_ids": "9391aba2e3485f1bd29b04009931afe156754027ea942ecb173c7a50dc44a24e"
+  },
+  "training_2025-09-01_2025-10-01.parquet": {
+   "n_dep": 183951,
+   "phase": "DEP",
+   "sha256_ids": "9446ba6bbea77054b1df8eff6e15f72b01ca244e7b0ae9a68f7b578877108def"
+  },
+  "training_2025-10-01_2025-11-01.parquet": {
+   "n_dep": 185674,
+   "phase": "DEP",
+   "sha256_ids": "387629851e4b3f9e8e5924e7d8c8f9122ed8012830cd25ee7c4f35030d8b66b8"
+  },
+  "training_2025-11-01_2025-12-01.parquet": {
+   "n_dep": 162332,
+   "phase": "DEP",
+   "sha256_ids": "d6b912528a43845727bcac2c1244a2789471c1ae0e7363099af2631e34cf9e82"
+  },
+  "training_2025-12-01_2026-01-01.parquet": {
+   "n_dep": 165677,
+   "phase": "DEP",
+   "sha256_ids": "51832a7dd6bb1ee31477bc0ba6d975d35017dcdf58426b918d61e3745efdf4e2"
+  }
+ },
+ "splits": {
+  "hold-2025-01": {
+   "n_train_dep": 1603332,
+   "n_val_dep": 153706,
+   "sha256_val_ids": "cab769637fe120cac5cca6691cd92cb868cd00e1274fed08777e9d2302d8ae1c",
+   "train_months": [
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10"
+   ],
+   "val_month": "2025-01"
+  },
+  "hold-2025-02": {
+   "n_train_dep": 1613307,
+   "n_val_dep": 143731,
+   "sha256_val_ids": "f197fae6cde3326f32912604df3c1413937201e2df6f43aec60d30fc1a076a27",
+   "train_months": [
+    "2025-01",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10"
+   ],
+   "val_month": "2025-02"
+  },
+  "hold-2025-06": {
+   "n_train_dep": 1573896,
+   "n_val_dep": 183142,
+   "sha256_val_ids": "9e5cdb9bc06bfe2df889bc385e5032032f1256370d2cbc8b3b30916d825a1521",
+   "train_months": [
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10"
+   ],
+   "val_month": "2025-06"
+  },
+  "hold-2025-07": {
+   "n_train_dep": 1566325,
+   "n_val_dep": 190713,
+   "sha256_val_ids": "ef75f7c9968fdbc86747eccdeb84cd7143ce6d95f223e1fdb06c5cbbcc6a13dc",
+   "train_months": [
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-08",
+    "2025-09",
+    "2025-10"
+   ],
+   "val_month": "2025-07"
+  },
+  "reserve": {
+   "months": [
+    "2025-11",
+    "2025-12"
+   ],
+   "n_dep": 328009,
+   "sha256_ids": "ad346350d2bd38fdd864270680d7b23fa6d1049e8c63fbe2b979858d353b9443"
+  }
+ }
+}

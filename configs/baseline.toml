@@ -1,0 +1,10 @@
+# Baselines sans apprentissage, conformes a la metrique officielle (RMSE) :
+# moyenne globale calculee sur le train, puis moyennes par aeroport avec repli global.
+name = "baseline"
+kind = "baseline"
+train_filter = true
+
+[baselines]
+global_mean = true
+airport_mean = true          # repli global si aéroport absent du train
+airport_hour_mean = false    # activee seulement comme variante validee

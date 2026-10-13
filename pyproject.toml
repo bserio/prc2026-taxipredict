@@ -1,0 +1,20 @@
+[project]
+name = "prc2026-final"
+version = "1.0.0"
+description = "PRC Data Challenge 2026 - prediction du taxi-out des departements (finale)"
+license = "GPL-3.0-or-later"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "lightgbm",
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

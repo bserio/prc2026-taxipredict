@@ -1,0 +1,21 @@
+{
+ "train_months": [
+  "2025-01",
+  "2025-02",
+  "2025-03",
+  "2025-04",
+  "2025-05",
+  "2025-06",
+  "2025-07",
+  "2025-08",
+  "2025-09",
+  "2025-10"
+ ],
+ "num_boost_round": 4000,
+ "rows": 1737573,
+ "target": "residu_du_proxy",
+ "n_features": 41,
+ "runtime_s": 106.3,
+ "iterations_source": "reports/residual-r1.json",
+ "config": "configs/tabular_residual.toml"
+}

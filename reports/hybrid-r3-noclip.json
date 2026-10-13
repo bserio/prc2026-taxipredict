@@ -1,0 +1,182 @@
+{
+ "run_id": "hybrid-r3-noclip",
+ "config": "configs/tabular_hybrid_noclip.toml",
+ "track": "hybrid",
+ "kind": "reconstruct",
+ "split": "dev",
+ "protocol": {
+  "all_months": [
+   "2025-01",
+   "2025-02",
+   "2025-03",
+   "2025-04",
+   "2025-05",
+   "2025-06",
+   "2025-07",
+   "2025-08",
+   "2025-09",
+   "2025-10",
+   "2025-11",
+   "2025-12"
+  ],
+  "reserve_months": [
+   "2025-11",
+   "2025-12"
+  ],
+  "dev_val_months": [
+   "2025-01",
+   "2025-02",
+   "2025-06",
+   "2025-07"
+  ]
+ },
+ "global": {
+  "rmse": 563.8383159124321,
+  "mae": 236.11450506216127,
+  "bias": -4.303638750229954,
+  "n_rows": 671292
+ },
+ "by_month": [
+  {
+   "month": "2025-07",
+   "n": 190713,
+   "rmse": 682.8807993694716,
+   "mae": 256.56764129045337,
+   "bias": -37.80984089607808
+  },
+  {
+   "month": "2025-02",
+   "n": 143731,
+   "rmse": 524.0754279801687,
+   "mae": 232.59503906435643,
+   "bias": 13.341964512833528
+  },
+  {
+   "month": "2025-01",
+   "n": 153706,
+   "rmse": 515.6712095871278,
+   "mae": 228.8503917219056,
+   "bias": 26.9467996183011
+  },
+  {
+   "month": "2025-06",
+   "n": 183142,
+   "rmse": 490.8716087379005,
+   "mae": 223.67451425121436,
+   "bias": -9.48831377090068
+  }
+ ],
+ "by_airport": [
+  {
+   "ADEP_mvt": "LIRF",
+   "n": 51927,
+   "rmse": 1524.3721448837796,
+   "mae": 414.6616195027531,
+   "bias": -8.419062003375636
+  },
+  {
+   "ADEP_mvt": "LTFM",
+   "n": 88348,
+   "rmse": 534.5837417510138,
+   "mae": 324.57987870347836,
+   "bias": -26.10003265798252
+  },
+  {
+   "ADEP_mvt": "LFPG",
+   "n": 77305,
+   "rmse": 512.6188419137019,
+   "mae": 229.79926136807256,
+   "bias": -8.28076413756209
+  },
+  {
+   "ADEP_mvt": "EGLL",
+   "n": 78229,
+   "rmse": 457.61778718673133,
+   "mae": 262.0324839367926,
+   "bias": -2.0988297701146235
+  },
+  {
+   "ADEP_mvt": "EDDM",
+   "n": 53133,
+   "rmse": 362.75183655950894,
+   "mae": 229.25202161539235,
+   "bias": -9.35687115285245
+  },
+  {
+   "ADEP_mvt": "EHAM",
+   "n": 80058,
+   "rmse": 294.5945970873344,
+   "mae": 186.47526131139264,
+   "bias": -3.4549707837260653
+  },
+  {
+   "ADEP_mvt": "LSZH",
+   "n": 43477,
+   "rmse": 285.02048441913263,
+   "mae": 188.03478406921437,
+   "bias": -1.017377575880478
+  },
+  {
+   "ADEP_mvt": "LEBL",
+   "n": 57470,
+   "rmse": 280.9465400536604,
+   "mae": 188.7272883512975,
+   "bias": 10.335194529330815
+  },
+  {
+   "ADEP_mvt": "LEMD",
+   "n": 68710,
+   "rmse": 264.01248342125234,
+   "mae": 176.83545124889056,
+   "bias": 11.558787801448092
+  },
+  {
+   "ADEP_mvt": "EDDF",
+   "n": 72635,
+   "rmse": 234.91056324456497,
+   "mae": 161.75530595757039,
+   "bias": 1.2145542938577765
+  }
+ ],
+ "out_of_domain": {
+  "n_negative": 92,
+  "n_zero": 0,
+  "n_over_7200": 155,
+  "n_nonfinite": 0
+ },
+ "folds": {
+  "2025-01": {
+   "proxy_used_share": 0.9897466592065371,
+   "fallback_share": 0.01025334079346285,
+   "fallback_kind": "causal_model",
+   "proxy_ok_share_train": 0.9867825253908735,
+   "clip_enabled": false
+  },
+  "2025-02": {
+   "proxy_used_share": 0.9915049641343899,
+   "fallback_share": 0.008495035865610068,
+   "fallback_kind": "causal_model",
+   "proxy_ok_share_train": 0.9866268478349131,
+   "clip_enabled": false
+  },
+  "2025-06": {
+   "proxy_used_share": 0.9846567144620022,
+   "fallback_share": 0.015343285537997797,
+   "fallback_kind": "causal_model",
+   "proxy_ok_share_train": 0.9873479569171025,
+   "clip_enabled": false
+  },
+  "2025-07": {
+   "proxy_used_share": 0.9769968486678936,
+   "fallback_share": 0.023003151332106397,
+   "fallback_kind": "causal_model",
+   "proxy_ok_share_train": 0.9882655259923707,
+   "clip_enabled": false
+  }
+ },
+ "runtime_s": 8.8,
+ "peak_rss_mib": 2471.3,
+ "peak_rss_mib_note": "pic RSS du processus principal uniquement (enfants non compt\u00e9s sur macOS)",
+ "metric_unit": "secondes",
+ "avertissement": "piste de reconstitution : utilise MVT_TIME et AOBT_3, informations post\u00e9rieures \u00e0 l'off-block"
+}

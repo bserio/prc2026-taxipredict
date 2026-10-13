@@ -1,0 +1,230 @@
+{
+ "run_id": "residual-r9-tail-desac",
+ "config": "configs/tabular_residual_tail.toml",
+ "track": "hybrid",
+ "kind": "residual",
+ "split": "dev",
+ "protocol": {
+  "all_months": [
+   "2025-01",
+   "2025-02",
+   "2025-03",
+   "2025-04",
+   "2025-05",
+   "2025-06",
+   "2025-07",
+   "2025-08",
+   "2025-09",
+   "2025-10",
+   "2025-11",
+   "2025-12"
+  ],
+  "reserve_months": [
+   "2025-11",
+   "2025-12"
+  ],
+  "dev_val_months": [
+   "2025-01",
+   "2025-02",
+   "2025-06",
+   "2025-07"
+  ]
+ },
+ "global": {
+  "rmse": 480.39855772149,
+  "mae": 164.90185322120578,
+  "bias": -3.5747840316306694,
+  "n_rows": 671292
+ },
+ "by_month": [
+  {
+   "month": "2025-07",
+   "n": 190713,
+   "rmse": 571.4475935668748,
+   "mae": 183.69769183455037,
+   "bias": -6.362062196096586
+  },
+  {
+   "month": "2025-02",
+   "n": 143731,
+   "rmse": 458.50229343467663,
+   "mae": 157.734063570476,
+   "bias": -14.930072065668936
+  },
+  {
+   "month": "2025-01",
+   "n": 153706,
+   "rmse": 450.16792258927734,
+   "mae": 156.12401281259545,
+   "bias": 4.063489226249562
+  },
+  {
+   "month": "2025-06",
+   "n": 183142,
+   "rmse": 413.2778639567314,
+   "mae": 158.32132850632937,
+   "bias": 1.828829861547324
+  }
+ ],
+ "by_airport": [
+  {
+   "ADEP_mvt": "LIRF",
+   "n": 51927,
+   "rmse": 1430.8382125330002,
+   "mae": 324.5884028348482,
+   "bias": -9.155203867280092
+  },
+  {
+   "ADEP_mvt": "LFPG",
+   "n": 77305,
+   "rmse": 448.62144188161363,
+   "mae": 171.6802798298519,
+   "bias": 4.96269917177639
+  },
+  {
+   "ADEP_mvt": "LTFM",
+   "n": 88348,
+   "rmse": 376.3023437713078,
+   "mae": 206.72629465593465,
+   "bias": -30.216925537075884
+  },
+  {
+   "ADEP_mvt": "EGLL",
+   "n": 78229,
+   "rmse": 270.1501477149357,
+   "mae": 175.28801046931187,
+   "bias": 4.207101510110415
+  },
+  {
+   "ADEP_mvt": "LSZH",
+   "n": 43477,
+   "rmse": 223.84130102130305,
+   "mae": 132.80703572158475,
+   "bias": 1.5180484500560159
+  },
+  {
+   "ADEP_mvt": "LEBL",
+   "n": 57470,
+   "rmse": 218.3384476337641,
+   "mae": 143.70382477422746,
+   "bias": 1.9626104874308143
+  },
+  {
+   "ADEP_mvt": "EDDF",
+   "n": 72635,
+   "rmse": 195.50313761421876,
+   "mae": 131.0390743142667,
+   "bias": -1.119486985978767
+  },
+  {
+   "ADEP_mvt": "EDDM",
+   "n": 53133,
+   "rmse": 190.3962314957467,
+   "mae": 123.2408464822142,
+   "bias": -5.327458885000101
+  },
+  {
+   "ADEP_mvt": "EHAM",
+   "n": 80058,
+   "rmse": 188.60644837284474,
+   "mae": 119.94160178158977,
+   "bias": -3.6250579601035295
+  },
+  {
+   "ADEP_mvt": "LEMD",
+   "n": 68710,
+   "rmse": 185.57283180640604,
+   "mae": 129.4282383761101,
+   "bias": 7.3981336931062325
+  }
+ ],
+ "out_of_domain": {
+  "n_negative": 141,
+  "n_zero": 0,
+  "n_over_7200": 183,
+  "n_nonfinite": 0
+ },
+ "folds": {
+  "2025-01": {
+   "proxy_used_share": 0.9906639948993533,
+   "fallback_kind": "causal_model",
+   "best_iteration": 4000,
+   "n_train_rows": 1585302,
+   "specialist": {
+    "actif": false,
+    "iterations": 0,
+    "cible": "none",
+    "part_lignes": 0.0
+   },
+   "tail": {
+    "actif": true,
+    "iterations": 1200,
+    "seuil_min": 30.0,
+    "part_lignes": 0.033824313950008456
+   },
+   "gate_modelee": {}
+  },
+  "2025-02": {
+   "proxy_used_share": 0.9922841975635041,
+   "fallback_kind": "causal_model",
+   "best_iteration": 4000,
+   "n_train_rows": 1594951,
+   "specialist": {
+    "actif": false,
+    "iterations": 0,
+    "cible": "none",
+    "part_lignes": 0.0
+   },
+   "tail": {
+    "actif": true,
+    "iterations": 1200,
+    "seuil_min": 30.0,
+    "part_lignes": 0.02477544858102984
+   },
+   "gate_modelee": {}
+  },
+  "2025-06": {
+   "proxy_used_share": 0.9863384696028219,
+   "fallback_kind": "causal_model",
+   "best_iteration": 4000,
+   "n_train_rows": 1556933,
+   "specialist": {
+    "actif": false,
+    "iterations": 0,
+    "cible": "none",
+    "part_lignes": 0.0
+   },
+   "tail": {
+    "actif": true,
+    "iterations": 1200,
+    "seuil_min": 30.0,
+    "part_lignes": 0.053914448897576746
+   },
+   "gate_modelee": {}
+  },
+  "2025-07": {
+   "proxy_used_share": 0.9793511716558388,
+   "fallback_kind": "causal_model",
+   "best_iteration": 4000,
+   "n_train_rows": 1550798,
+   "specialist": {
+    "actif": false,
+    "iterations": 0,
+    "cible": "none",
+    "part_lignes": 0.0
+   },
+   "tail": {
+    "actif": true,
+    "iterations": 1200,
+    "seuil_min": 30.0,
+    "part_lignes": 0.08347097471069094
+   },
+   "gate_modelee": {}
+  }
+ },
+ "runtime_s": 688.9,
+ "peak_rss_mib": 4474.3,
+ "peak_rss_mib_note": "pic RSS du processus principal uniquement (enfants non compt\u00e9s sur macOS)",
+ "metric_unit": "secondes",
+ "avertissement": "piste de reconstitution : le proxy MVT_TIME - AOBT_3 sert de base, l'information est posterieure a l'off-block"
+}

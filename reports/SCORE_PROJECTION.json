@@ -1,0 +1,259 @@
+{
+  "run_profil": "residual-r1",
+  "piste": "residual",
+  "genere_le": "2026-10-10T13:04:30+0200",
+  "duree_s": 10.9,
+  "retro_validation": [
+    {
+      "mois": "2025-01",
+      "projete": 360.4,
+      "reel": 449.8,
+      "ecart_pct": -19.88
+    },
+    {
+      "mois": "2025-02",
+      "projete": 360.6,
+      "reel": 459.6,
+      "ecart_pct": -21.54
+    },
+    {
+      "mois": "2025-06",
+      "projete": 510.5,
+      "reel": 412.3,
+      "ecart_pct": 23.81
+    },
+    {
+      "mois": "2025-07",
+      "projete": 641.4,
+      "reel": 570.2,
+      "ecart_pct": 12.48
+    }
+  ],
+  "ecart_max_pct": 23.81,
+  "effet_mois_sigma_log": 0.233,
+  "largeur_intervalle": 1.579,
+  "niveau_projectable": false,
+  "usage_autorise": [
+    "comparaison relative entre mois",
+    "dérive de population"
+  ],
+  "projections": {
+    "2026-01": {
+      "rmse_projete": 450.9,
+      "ic95_estimation": [
+        402.3,
+        518.4
+      ],
+      "intervalle_elargi": [
+        285.6,
+        712.0
+      ],
+      "n_lignes": 152719,
+      "avertissements": [
+        "cellule 1800-2700|LIRF (poids 0.000) remplacée par sa tranche",
+        "cellule 3600-5400|LIRF (poids 0.000) remplacée par sa tranche",
+        "cellule 5400-7200|autre (poids 0.001) remplacée par l'erreur globale"
+      ]
+    },
+    "2026-02": {
+      "rmse_projete": 395.7,
+      "ic95_estimation": [
+        347.5,
+        452.5
+      ],
+      "intervalle_elargi": [
+        250.6,
+        624.8
+      ],
+      "n_lignes": 144158,
+      "avertissements": [
+        "cellule 2700-3600|LIRF (poids 0.000) remplacée par sa tranche",
+        "cellule 5400-7200|autre (poids 0.000) remplacée par l'erreur globale",
+        "cellule >7200|autre (poids 0.000) remplacée par l'erreur globale"
+      ]
+    },
+    "2026-06": {
+      "rmse_projete": 470.0,
+      "ic95_estimation": [
+        398.5,
+        534.4
+      ],
+      "intervalle_elargi": [
+        297.6,
+        742.1
+      ],
+      "n_lignes": 181791,
+      "avertissements": [
+        "cellule 1800-2700|LIRF (poids 0.000) remplacée par sa tranche",
+        "cellule 2700-3600|LIRF (poids 0.000) remplacée par sa tranche",
+        "cellule 5400-7200|autre (poids 0.000) remplacée par l'erreur globale",
+        "cellule >7200|autre (poids 0.000) remplacée par l'erreur globale"
+      ]
+    },
+    "2026-07": {
+      "rmse_projete": 564.8,
+      "ic95_estimation": [
+        468.9,
+        663.2
+      ],
+      "intervalle_elargi": [
+        357.7,
+        891.9
+      ],
+      "n_lignes": 192122,
+      "avertissements": [
+        "cellule 1800-2700|LIRF (poids 0.000) remplacée par sa tranche",
+        "cellule 3600-5400|LIRF (poids 0.000) remplacée par sa tranche",
+        "cellule 5400-7200|autre (poids 0.000) remplacée par l'erreur globale",
+        "cellule >7200|LIRF (poids 0.000) remplacée par l'erreur globale",
+        "cellule >7200|autre (poids 0.000) remplacée par l'erreur globale"
+      ]
+    },
+    "poolé": {
+      "rmse_projete": 480.8,
+      "ic95_estimation": [
+        400.8,
+        550.9
+      ],
+      "intervalle_elargi": [
+        304.5,
+        759.2
+      ],
+      "n_lignes": 670790,
+      "avertissements": [
+        "cellule 1800-2700|LIRF (poids 0.000) remplacée par sa tranche",
+        "cellule 2700-3600|LIRF (poids 0.000) remplacée par sa tranche",
+        "cellule 3600-5400|LIRF (poids 0.000) remplacée par sa tranche",
+        "cellule 5400-7200|autre (poids 0.000) remplacée par l'erreur globale",
+        "cellule >7200|LIRF (poids 0.000) remplacée par l'erreur globale",
+        "cellule >7200|autre (poids 0.000) remplacée par l'erreur globale"
+      ]
+    }
+  },
+  "janvier_plus_juillet_2026": {
+    "rmse_projete": 517.5,
+    "intervalle_elargi": [
+      327.7,
+      817.2
+    ],
+    "n_lignes": 344841,
+    "cible": 385.0,
+    "gain_central_necessaire_pct": 25.6,
+    "gain_borne_optimiste_pct": -17.5
+  },
+  "dérive": [
+    {
+      "population": "2025 (mois cibles, étiquettes connues)",
+      "mois": "",
+      "n": 671292,
+      "sans_fiche_reseau_pct": 1.338,
+      "proxy_gt_1h_pct": 0.101,
+      "proxy_gt_2h_pct": 0.0012,
+      "LIRF_pct": 7.74,
+      "proxy_mediane": 957.0,
+      "proxy_p99": 2225.0
+    },
+    {
+      "population": "2026 (entrée officielle)",
+      "mois": "2026-01",
+      "n": 152719,
+      "sans_fiche_reseau_pct": 1.606,
+      "proxy_gt_1h_pct": 0.369,
+      "proxy_gt_2h_pct": 0.0,
+      "LIRF_pct": 7.24,
+      "proxy_mediane": 1001.0,
+      "proxy_p99": 2637.0
+    },
+    {
+      "population": "2026 (entrée officielle)",
+      "mois": "2026-02",
+      "n": 144158,
+      "sans_fiche_reseau_pct": 0.916,
+      "proxy_gt_1h_pct": 0.078,
+      "proxy_gt_2h_pct": 0.0014,
+      "LIRF_pct": 7.12,
+      "proxy_mediane": 956.0,
+      "proxy_p99": 2103.0
+    },
+    {
+      "population": "2026 (entrée officielle)",
+      "mois": "2026-06",
+      "n": 181791,
+      "sans_fiche_reseau_pct": 1.357,
+      "proxy_gt_1h_pct": 0.164,
+      "proxy_gt_2h_pct": 0.0006,
+      "LIRF_pct": 8.24,
+      "proxy_mediane": 958.0,
+      "proxy_p99": 2099.0
+    },
+    {
+      "population": "2026 (entrée officielle)",
+      "mois": "2026-07",
+      "n": 192122,
+      "sans_fiche_reseau_pct": 1.477,
+      "proxy_gt_1h_pct": 0.177,
+      "proxy_gt_2h_pct": 0.0026,
+      "LIRF_pct": 8.24,
+      "proxy_mediane": 965.0,
+      "proxy_p99": 2049.0
+    }
+  ],
+  "profil_cellules": {
+    "0-900|LIRF": {
+      "rmse": 379.1,
+      "n": 25206
+    },
+    "0-900|autre": {
+      "rmse": 187.8,
+      "n": 267335
+    },
+    "1800-2700|LIRF": {
+      "rmse": 622.4,
+      "n": 90
+    },
+    "1800-2700|autre": {
+      "rmse": 462.2,
+      "n": 17325
+    },
+    "2700-3600|autre": {
+      "rmse": 759.3,
+      "n": 1837
+    },
+    "3600-5400|LIRF": {
+      "rmse": 986.6,
+      "n": 2
+    },
+    "3600-5400|autre": {
+      "rmse": 678.0,
+      "n": 649
+    },
+    "5400-7200|autre": {
+      "rmse": 1319.1,
+      "n": 17
+    },
+    "900-1800|LIRF": {
+      "rmse": 446.8,
+      "n": 25981
+    },
+    "900-1800|autre": {
+      "rmse": 223.4,
+      "n": 323492
+    },
+    ">7200|LIRF": {
+      "rmse": 425.5,
+      "n": 2
+    },
+    ">7200|autre": {
+      "rmse": 3489.8,
+      "n": 6
+    },
+    "sans fiche réseau|LIRF": {
+      "rmse": 12269.5,
+      "n": 646
+    },
+    "sans fiche réseau|autre": {
+      "rmse": 1428.8,
+      "n": 8704
+    }
+  }
+}

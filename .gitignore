@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# chemins locaux et secrets (jamais versionnés)
+configs/paths.local.toml
+*.pem
+*.key
+
+# artefacts volumineux
+artifacts/
+tmp/
+experiments/runs/
+submission/*.parquet
+
+# rapports : seules les synthèses .json/.md sont versionnées ; les *.eval.parquet (~9 Mo chacun)
+# et empreintes par run sont régénérables via les commandes du README §9
+reports/*
+!reports/*.json
+!reports/*.md
+
+# état Arbor local (emplacement réel vérifié dans docs/ARBOR_CONTRACTS.md)
+.arbor/
+arbor_state/
+
+.DS_Store

@@ -1,0 +1,22 @@
+name = "hybrid"
+kind = "reconstruct"            # reconstitution analytique, pas un modèle prédictif
+track = "hybrid"
+train_filter = true
+
+# Identité officielle : TAXITIME_SEC_mvt = MVT_TIME_UTC_mvt - BLOCK_TIME_UTC_mvt (départ).
+# BLOCK_TIME étant masqué dans les entrées de finale, il est estimé par AOBT_3_flt.
+[reconstruct]
+proxy = ["MVT_TIME_UTC_mvt", "AOBT_3_flt"]   # proxy = MVT_TIME - AOBT_3
+airport_bias = true             # biais (cible - proxy) moyen par aéroport, calé sur le train du pli
+fallback = "causal"             # si proxy absent ou aberrant : prédiction du modèle causal
+min_sec = 60                    # plage de plausibilité du proxy hors de laquelle on bascule
+max_sec = 7200
+
+[clip]
+enabled = true                  # écrêtage par aéroport, bornes calibrées sur le train du pli
+q_low = 0.005
+q_high = 0.995
+
+[budget]
+max_runtime_s = 600
+max_mem_gib = 30

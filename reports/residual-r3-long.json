@@ -1,0 +1,178 @@
+{
+ "run_id": "residual-r3-long",
+ "config": "configs/tabular_residual_long.toml",
+ "track": "hybrid",
+ "kind": "residual",
+ "split": "dev",
+ "protocol": {
+  "all_months": [
+   "2025-01",
+   "2025-02",
+   "2025-03",
+   "2025-04",
+   "2025-05",
+   "2025-06",
+   "2025-07",
+   "2025-08",
+   "2025-09",
+   "2025-10",
+   "2025-11",
+   "2025-12"
+  ],
+  "reserve_months": [
+   "2025-11",
+   "2025-12"
+  ],
+  "dev_val_months": [
+   "2025-01",
+   "2025-02",
+   "2025-06",
+   "2025-07"
+  ]
+ },
+ "global": {
+  "rmse": 480.60555248701786,
+  "mae": 164.70291374900253,
+  "bias": -4.444670693159447,
+  "n_rows": 671292
+ },
+ "by_month": [
+  {
+   "month": "2025-07",
+   "n": 190713,
+   "rmse": 570.7878427755234,
+   "mae": 183.00134860278015,
+   "bias": -8.125578247198069
+  },
+  {
+   "month": "2025-02",
+   "n": 143731,
+   "rmse": 460.8030432613188,
+   "mae": 158.2545843317985,
+   "bias": -15.877853377348206
+  },
+  {
+   "month": "2025-01",
+   "n": 153706,
+   "rmse": 450.23097002003186,
+   "mae": 155.82983494191376,
+   "bias": 2.912715770802779
+  },
+  {
+   "month": "2025-06",
+   "n": 183142,
+   "rmse": 413.04344930286715,
+   "mae": 158.15564922376007,
+   "bias": 2.1863874961402474
+  }
+ ],
+ "by_airport": [
+  {
+   "ADEP_mvt": "LIRF",
+   "n": 51927,
+   "rmse": 1430.502292569793,
+   "mae": 324.5467633158218,
+   "bias": -11.799749140765016
+  },
+  {
+   "ADEP_mvt": "LFPG",
+   "n": 77305,
+   "rmse": 448.45755809368484,
+   "mae": 171.43899096693116,
+   "bias": 5.067763184394574
+  },
+  {
+   "ADEP_mvt": "LTFM",
+   "n": 88348,
+   "rmse": 380.82115599780604,
+   "mae": 208.2868814442072,
+   "bias": -33.153234673358035
+  },
+  {
+   "ADEP_mvt": "EGLL",
+   "n": 78229,
+   "rmse": 269.54269975027063,
+   "mae": 175.06056016117572,
+   "bias": 4.493625033639349
+  },
+  {
+   "ADEP_mvt": "LSZH",
+   "n": 43477,
+   "rmse": 223.97731105590853,
+   "mae": 132.18183648248953,
+   "bias": 1.2976674884757906
+  },
+  {
+   "ADEP_mvt": "LEBL",
+   "n": 57470,
+   "rmse": 217.90940380463337,
+   "mae": 143.5645170830984,
+   "bias": 2.058321408371626
+  },
+  {
+   "ADEP_mvt": "EDDF",
+   "n": 72635,
+   "rmse": 193.8223912773009,
+   "mae": 129.76911982002142,
+   "bias": -1.594137649705481
+  },
+  {
+   "ADEP_mvt": "EDDM",
+   "n": 53133,
+   "rmse": 190.25872825755337,
+   "mae": 122.60984315892888,
+   "bias": -7.409978718174353
+  },
+  {
+   "ADEP_mvt": "EHAM",
+   "n": 80058,
+   "rmse": 187.6606385257238,
+   "mae": 119.27803796503977,
+   "bias": -3.6229482199021654
+  },
+  {
+   "ADEP_mvt": "LEMD",
+   "n": 68710,
+   "rmse": 185.77281703163968,
+   "mae": 129.15562448994388,
+   "bias": 6.398204062701467
+  }
+ ],
+ "out_of_domain": {
+  "n_negative": 164,
+  "n_zero": 0,
+  "n_over_7200": 179,
+  "n_nonfinite": 0
+ },
+ "folds": {
+  "2025-01": {
+   "proxy_used_share": 0.9906639948993533,
+   "fallback_kind": "causal_model",
+   "best_iteration": 9000,
+   "n_train_rows": 1585302
+  },
+  "2025-02": {
+   "proxy_used_share": 0.9922841975635041,
+   "fallback_kind": "causal_model",
+   "best_iteration": 9000,
+   "n_train_rows": 1594951
+  },
+  "2025-06": {
+   "proxy_used_share": 0.9863384696028219,
+   "fallback_kind": "causal_model",
+   "best_iteration": 9000,
+   "n_train_rows": 1556933
+  },
+  "2025-07": {
+   "proxy_used_share": 0.9793511716558388,
+   "fallback_kind": "causal_model",
+   "best_iteration": 9000,
+   "n_train_rows": 1550798
+  }
+ },
+ "runtime_s": 1107.2,
+ "peak_rss_mib": 4497.1,
+ "peak_rss_mib_note": "pic RSS du processus principal uniquement (enfants non compt\u00e9s sur macOS)",
+ "metric_unit": "secondes",
+ "avertissement": "piste de reconstitution : le proxy MVT_TIME - AOBT_3 sert de base, l'information est posterieure a l'off-block"
+}

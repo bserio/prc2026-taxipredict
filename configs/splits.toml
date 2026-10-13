@@ -1,0 +1,26 @@
+# Protocole temporel fige. Toute modification impose de renumeroter le run et de
+# regenerer l'empreinte des partitions (src.splits.fingerprint).
+
+[protocol]
+# 12 fichiers mensuels officiels 2025, couverture verifiee : 2025-01-01 00:01:04 -> 2025-12-31 23:57:36
+all_months = [
+  "2025-01","2025-02","2025-03","2025-04","2025-05","2025-06",
+  "2025-07","2025-08","2025-09","2025-10","2025-11","2025-12",
+]
+
+# Reserve interne 2025 : disjointe de tous les plis, posterieure a leur periode
+# d'entrainement, jamais utilisee pour reglages, features ou early stopping.
+reserve_months = ["2025-11","2025-12"]
+
+# Plis de developpement : mois tenu hors, choisis pour reproduire la saisonnalite
+# des quatre mois vises par la finale. Entraînement = tous les mois sauf reserve et sauf validation.
+dev_val_months = ["2025-01","2025-02","2025-06","2025-07"]
+
+# Mois temoins supplementaires : elargissent la rotation sans toucher a la reserve.
+# Ils ne servent jamais a departager deux recettes (le critere de choix reste dev_val_months) ;
+# ils reduisent le bruit de l'estimation en augmentant le nombre de mois tenus hors.
+witness_months = ["2025-03","2025-10"]
+
+[protocol.final]
+# Entrees officielles de la finale (aucune cible disponible).
+months = ["2026-01","2026-02","2026-06","2026-07"]
