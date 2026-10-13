@@ -1,5 +1,8 @@
 # PRC Data Challenge 2026 — taxi-out prediction (team lighthearted-sandwich)
 
+**Repository:** <https://github.com/bserio/prc2026-taxipredict> · **Licence:** GNU GPLv3 ·
+**Official score:** 595.3169 s RMSE (causal model, ranked months Jan + Jul 2026)
+
 A solution to the EUROCONTROL Performance Review Commission data challenge: predicting the
 taxi-out time of departures (`TAXITIME_SEC_mvt`) at the ten final-round airports over January,
 February, June and July 2026. This repository ships the training and prediction code, the frozen
